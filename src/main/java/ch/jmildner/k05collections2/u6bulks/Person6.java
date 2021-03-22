@@ -53,7 +53,9 @@ public class Person6 implements Comparable<Person6> {
 
     @Override
     public int compareTo(Person6 o) {
-        return this.id - o.id;
+        String s1=String.format("%10s/%20s/%2d",this.id,this.name,this.age);
+        String s2=String.format("%10s/%20s/%2d",o.id,o.name,o.age);
+        return s1.compareTo(s2);
     }
 
     @Override
